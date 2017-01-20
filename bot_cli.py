@@ -1,11 +1,7 @@
-from brain import * 
+from help_cli import *
 
-def bot_cli():
-	while(1):
-		command = raw_input("Bot >>  ")
-		valid_response = brain(command)
-		if valid_response:
-			print valid_response
-		else:
-			print "Bye Bye!!"
-			exit()
+def interact_bot(argv):
+	if argv[1] == '-h':
+		help_cli()
+	else:
+		print "Not Recognized"
