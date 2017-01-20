@@ -7,24 +7,15 @@ import time
 
 from help import *
 from bot_cli import *
+from interact_bot import *
 
-def interact_bot(argv):
-	if argv[1] == '-h':
-		help()
-	elif argv[1] == 'sysinfo':
-		print os.getlogin()
-		print platform.machine()
-		print platform.version()
-		print platform.system()
-		print platform.processor()
-	else:
-		print "Not Recognized"
 def main(argv):
 	print time.ctime()
+	print "Yo " + os.getlogin() + ' !!!'
 	if len(argv) > 1:
 		interact_bot(argv)
 	else:
-		bot_cli(argv)
+		bot_cli()
 	
 
 if __name__ == "__main__":
