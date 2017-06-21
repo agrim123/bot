@@ -36,11 +36,10 @@ def main(argv):
        ""         "~~"
     """
 	print "Yo " + os.getlogin() + ' !!!'
-	# if len(argv) > 1:
-	# 	interact_bot(argv)
-	# else:
-	# 	bot_cli()
-	exit()
+	if len(argv) > 1:
+		interact_bot(argv)
+	else:
+		bot_cli()
 	
 
 if __name__ == "__main__":
